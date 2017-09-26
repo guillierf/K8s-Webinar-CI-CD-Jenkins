@@ -1,7 +1,10 @@
-git clone https://github.com/janakiramm/hellowhale.git
-cd hellowhale
-docker build . -t hellowhale
-docker run -d -p 80:80 --name hellowhale hellowhale
-docker tag hellowhale guillierf/hellowhale
-ocker login -u guillierf
-docker push guillierf/hellowhale
+# Jenkins - execute shell 1
+IMAGE_NAME="10.40.207.9/library/hellowhale:${BUILD_NUMBER}"
+cd Build-Docker/hellowhale/
+docker build . -t $IMAGE_NAME
+docker login 10.40.207.9 -u admin -p "VMware1!"
+docker push $IMAGE_NAME
+
+# Jenkins - execute shell 2
+IMAGE_NAME="10.40.207.9/library/hellowhale:${BUILD_NUMBER}"
+kubectl set image deployment hellowhale hellowhale=$IMAGE_NAME
