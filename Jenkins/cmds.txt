@@ -1,0 +1,7 @@
+git clone https://github.com/janakiramm/hellowhale.git
+cd hellowhale
+docker build . -t hellowhale
+docker run -d -p 80:80 --name hellowhale hellowhale
+docker tag hellowhale guillierf/hellowhale
+ocker login -u guillierf
+docker push guillierf/hellowhale
