@@ -4,7 +4,7 @@ Example taken from:
 Kubernetes Webinar Series - Building CI CD Pipelines with Jenkins and Kubernetes
 https://www.youtube.com/watch?v=288rTpd1SDE&t=1896s
 
-# Note
+# Lab Config
 We are using the following components for this Lab:
 Harbor (private registry) - configured with unsecure access mode - IP: 10.40.207.9
 
@@ -67,3 +67,7 @@ git commit -m "update index.html"
 $ git push
 ```
 
+Check:
+```
+kubectl rollout history deployment hellowhale
+```
