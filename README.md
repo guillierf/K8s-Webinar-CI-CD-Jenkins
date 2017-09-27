@@ -8,7 +8,7 @@ https://www.youtube.com/watch?v=288rTpd1SDE&t=1896s
 We are using the following components for this Lab:
 Harbor (private registry) - configured with unsecure access mode - IP: 10.40.207.9
 
-# Jenkins Jobs
+# Create Jenkins Jobs
 
 Configure a new Jenkins jobs with the following parameters:
 
@@ -25,7 +25,7 @@ schedule: * * * * *
 *Build: Execute shell 2 (commands are in the file Jenkins/cmd.txt)
 
 
-# Kubernetes Cluster
+# Run Deployment on Kubernetes Cluster
 
 Run the following commands on your K8s cluster:
 
@@ -41,5 +41,29 @@ kubectl expose deployment hellowhale --port=80 --name=hellowhale-svc --type=Node
 kubectl scale deployment hellowhale --replicas 10
 ```
 
+# Automatically trigger the Jenkins jobs
 
+from your mac:
+
+```
+git clone https://github.com/guillierf/K8s-Webinar-CI-CD-Jenkins.git
+```
+(replace the URL link with your own cloned repository)
+
+```vi Build-Docker/hellowhale/html/index.html
+```
+
+modify Hello Kubernetes Fans! v<X> to modify Hello Kubernetes Fans! v<Y>
+
+```
+git add Build-Docker/hellowhale/html/index.html
+```
+
+```
+git commit -m "update index.html"
+```
+
+```
+$ git push
+```
 
