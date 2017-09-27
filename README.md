@@ -21,9 +21,9 @@ Repository URL: https://github.com/guillierf/K8s-Webinar-CI-CD-Jenkins.git (clon
 
 schedule: * * * * *
 
-*Build: Execute shell 1 (commands are in the file Jenkins/cmd.txt)
+*Build: Execute shell 1 (commands are in the file Jenkins/cmds.txt)
 
-*Build: Execute shell 2 (commands are in the file Jenkins/cmd.txt)
+*Build: Execute shell 2 (commands are in the file Jenkins/cmds.txt)
 
 
 # Run Deployment on Kubernetes Cluster
