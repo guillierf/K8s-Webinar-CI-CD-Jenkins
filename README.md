@@ -12,17 +12,17 @@ Harbor (private registry) - configured with unsecure access mode - IP: 10.40.207
 
 Configure a new Jenkins jobs with the following parameters:
 
-Source Code Management: Git
+*Source Code Management: Git
 
 Repository URL: https://github.com/guillierf/K8s-Webinar-CI-CD-Jenkins.git (clone this repository)
 
-Build Triggers: Poll SCM
+*Build Triggers: Poll SCM
 
 schedule: * * * * *
 
-Build: Execute shell 1 (commands are in the file Jenkins/cmd.txt)
+*Build: Execute shell 1 (commands are in the file Jenkins/cmd.txt)
 
-Build: Execute shell 2 (commands are in the file Jenkins/cmd.txt)
+*Build: Execute shell 2 (commands are in the file Jenkins/cmd.txt)
 
 
 
